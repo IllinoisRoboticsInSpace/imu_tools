@@ -44,13 +44,13 @@ ImuFilterMadgwickRos::ImuFilterMadgwickRos(const rclcpp::NodeOptions &options)
     // **** get paramters
     declare_parameter("stateless", false);
     get_parameter("stateless", stateless_);
-    declare_parameter("use_mag", true);
-    get_parameter("use_mag", use_mag_);
+    declare_parameter("use_mag", false);
+    //get_parameter("use_mag", use_mag_);
     declare_parameter("publish_tf", true);
     get_parameter("publish_tf", publish_tf_);
     declare_parameter("reverse_tf", false);
     get_parameter("reverse_tf", reverse_tf_);
-    declare_parameter("fixed_frame", "odom");
+    declare_parameter("fixed_frame", "camera_link");
     get_parameter("fixed_frame", fixed_frame_);
     declare_parameter("constant_dt", 0.0);
     get_parameter("constant_dt", constant_dt_);
